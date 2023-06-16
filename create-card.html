@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <!-- tailwind CSS -->
+    <style type="text/taiwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+
+    <!-- Tailwind confiq -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mainPurple: '#6A0E95',
+              lightPurple: '#791FA40D',
+              lightPurple2: '#791FA414',
+              textWhite: '#FFFFFF',
+              gray: '#D9D9D9',
+              graylike3: '#EFEBF0',
+              grayLike: '#F6F6F6',
+              smallWhite: '#DADADA',
+              bgWhite: '#FAF7FB',
+              lightGreen: '#50BD680F',
+              newGreen: '#50BD68',
+              secondGreen: '#199033',
+              lightBlue: '#229ED90F',
+              lightYellow: '#FFB900',
+              deepYellow: '#EBC84D',
+              newLightPurple: 'rgba(169, 0, 228, 0.12)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./img/zeenah.svg" type="image/x-icon" />
+
+    <title>Create Card</title>
+  </head>
+
+  <body class="creat-card">
+    <div class="h-screen bg-bgWhite p-5">
+      <h2 class="font-bold text-2xl">
+        &larr; <span class="ml-2">Create Card</span>
+      </h2>
+
+      <div class="form">
+        <div class="mt-5">
+          <label for="Card name" class="font-light text-sm">Card name</label>
+          <input
+            type="text"
+            placeholder="John doe"
+            class="w-full py-2 px-5 rounded-lg bg-transparent"
+          />
+        </div>
+
+        <div class="mt-5">
+          <label for="Email" class="font-light text-sm">Email</label>
+          <input
+            type="text"
+            placeholder="johndoe@gmail.com"
+            class="w-full py-2 px-5 rounded-lg bg-transparent"
+          />
+        </div>
+
+        <div class="mt-5">
+          <label for="Card type" class="font-light text-sm">Card type</label>
+          <div class="w-full rounded-lg border-2">
+            <select
+              name=""
+              id=""
+              class="border-0 border-r-2 outline-0 bg-transparent focus-outline"
+            >
+              <option value="">+234</option>
+              <option value="">+1</option>
+              <option value="">+94</option>
+            </select>
+            <input
+              type="tel"
+              class="border-0 bg-transparent focus-outline w-4/6"
+            />
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <label for="Date of birth" class="font-light text-sm"
+            >Date of birth</label
+          >
+          <div class="w-full rounded-lg border-2 flex">
+            <img src="./img/Calendar.svg" alt="" class="border-r-2 px-7" />
+
+            <input
+              type="date"
+              placeholder="10-07-1990"
+              class="border-0 focus-outline w-full bg-transparent"
+            />
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <label for="Top up amount" class="font-light text-sm"
+            >Top up amount</label
+          >
+          <div class="w-full rounded-lg border-2">
+            <select
+              name=""
+              id=""
+              class="border-0 border-r-2 outline-0 bg-transparent focus-outline"
+            >
+              <option value="">USD</option>
+              <option value="">NGN</option>
+              <option value="">BRL</option>
+            </select>
+            <input
+              type="tel"
+              placeholder="10"
+              class="border-0 bg-transparent focus-outline w-4/6"
+            />
+          </div>
+          <p class="text-sm font-light text-red-500">
+            Please enter an amount higher than USD 10.00
+          </p>
+        </div>
+
+        <div class="mt-3">
+          <label for="Phone number" class="font-light text-sm"
+            >Phone number</label
+          >
+          <div class="w-full rounded-lg border-2">
+            <select name="" id="" class="bg-transparent w-full">
+              <option value="">Virtual MasterCard</option>
+              <option value="">MasterCard</option>
+              <option value="">Virtual</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <button class="py-3 bg-mainPurple text-textWhite rounded-2xl w-full mt-5">
+        Submit
+      </button>
+    </div>
+
+    <div class="p-5">
+      <div class="bg-textWhite">
+        <p class="text-center font-bold text-lg">Create Virtual master card</p>
+
+        <div class="bg-lightPurple2 py-2 px-5 mt-3">
+          <ul class="list-disc text-mainPurple font-light text-xs">
+            <li>You will be charged $1 for a virtual MasterCard</li>
+            <li>Maintenance fee of $1.5 will be charged monthly</li>
+            <li>$1.5 will be charged for card top up</li>
+          </ul>
+        </div>
+
+        <div class="mt-3">
+          <input type="checkbox" />
+          <span class="font-light text-sm"
+            >I accept the following
+            <span class="text-mainPurple font-bold">terms</span> and
+            <span class="text-mainPurple font-bold">conditions</span></span
+          >
+        </div>
+
+        <button
+          class="py-3 bg-mainPurple text-textWhite rounded-2xl w-full mt-3"
+        >
+          Create Card
+        </button>
+      </div>
+    </div>
+  </body>
+
+  <script src="./script.js"></script>
+  <script
+    src="https://kit.fontawesome.com/fc49c28ef9.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

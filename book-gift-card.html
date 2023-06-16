@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <!-- tailwind CSS -->
+    <style type="text/taiwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+
+    <!-- Tailwind confiq -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mainPurple: '#6A0E95',
+              lightPurple: '#791FA40D',
+              lightPurple2: '#791FA414',
+              textWhite: '#FFFFFF',
+              gray: '#D9D9D9',
+              grayLike: '#F6F6F6',
+              grayLike2: '#EDEDED',
+              smallWhite: '#DADADA',
+              bgWhite: '#FAF7FB',
+              lightGreen: '#50BD680F',
+              newGreen: '#50BD68',
+              secondGreen: '#199033',
+              lightBlue: '#229ED90F',
+              lightYellow: '#FFB900',
+              deepYellow: '#EBC84D',
+              newLightPurple: 'rgba(169, 0, 228, 0.12)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./img/zeenah.svg" type="image/x-icon" />
+
+    <title>Gift Card</title>
+  </head>
+  <body class="book-gift-card">
+    <div class="h-scree bg-bgWhite p-5">
+      <h2 class="font-bold text-2xl my-5">
+        &larr; <span class="ml-2">Gift Cards</span>
+      </h2>
+
+      <div>
+        <img src="./img/amazon.svg" alt="" class="w-full rounded-3xl" />
+        <p class="text-center my-1">Amazon USA Gift Card</p>
+      </div>
+
+      <div class="mt-5">
+        <p class="text-sm font-light">Available amounts</p>
+        <div class="grid grid-cols-4 gap-x-3 text-center">
+          <div class="px-3 py-2 bg-grayLike2 rounded-lg">$10</div>
+          <div class="px-3 py-2 bg-grayLike2 rounded-lg">$15</div>
+          <div class="px-3 py-2 bg-grayLike2 rounded-lg">$50</div>
+          <div class="px-1 py-2 bg-mainPurple text-textWhite rounded-lg">
+            $100
+          </div>
+        </div>
+      </div>
+
+      <div class="form mt-5">
+        <div>
+          <label for="Sender’s Name" class="font-light text-sm"
+            >Sender’s Name</label
+          >
+          <br />
+          <input
+            type="text"
+            placeholder="Emmanuel Onyia"
+            class="w-full bg-transparent rounded-2xl py-3 px-5"
+          />
+        </div>
+
+        <div class="mt-5">
+          <label for="Recipient’s email address" class="font-light text-sm"
+            >Recipient’s email address</label
+          >
+          <br />
+          <input
+            type="text"
+            placeholder="emmaonyia042@gmail.com"
+            class="w-full bg-transparent rounded-2xl py-3 px-5"
+          />
+        </div>
+      </div>
+
+      <div class="mb-10 flex justify-between">
+        <div class="mt-5 w-3/6">
+          <p>Quantity</p>
+          <div class="w-full flex items-center justify-between">
+            <p
+              class="bg-mainPurple p-2 rounded-3xl text-textWhite text-center w-10"
+            >
+              &minus;
+            </p>
+            <div class="px-5 py-1 border-2 rounded-lg text-center">1</div>
+            <p
+              class="bg-mainPurple p-2 rounded-3xl text-textWhite text-center w-10"
+            >
+              &plus;
+            </p>
+          </div>
+        </div>
+
+        <div class="text-right mt-6">
+          <p class="font-light text-sm">Total</p>
+          <p class="font-bold text-4xl">$100</p>
+        </div>
+      </div>
+
+      <button class="w-full p-4 bg-mainPurple rounded-2xl text-textWhite">
+        Continue
+      </button>
+    </div>
+
+    <div class="checked bg-textWhite px-5 pt-10 rounded-t-3xl">
+      <h2 class="text-center">Confirm Transaction</h2>
+      <div class="trac-wraper mt-7">
+        <p class="p-wrap">Sender’s name</p>
+        <p class="p-wrap2">Reece James</p>
+      </div>
+      <div class="trac-wraper mt-7">
+        <p class="p-wrap">Recipient email</p>
+        <p class="p-wrap2">reecejames@gmail,com</p>
+      </div>
+      <div class="trac-wraper mt-7">
+        <p class="p-wrap">Amount</p>
+        <p class="p-wrap2">$100.00</p>
+      </div>
+
+      <div class="px-5 py-3 bg-grayLike mt-5 rounded-2xl">
+        <div class="flex justify-between items-center">
+          <p>Charges</p>
+          <p class="text-mainPurple font-bold">$1</p>
+        </div>
+        <div class="flex justify-between items-center mt-2">
+          <p>Total cost</p>
+          <p class="text-mainPurple font-bold">$101.00</p>
+        </div>
+      </div>
+
+      <div class="grid my-5 grid-cols-2 gap-3 stick-buttom">
+        <button class="p-4 bg-lightPurple2 text-mainPurple rounded-2xl">
+          Cancel
+        </button>
+        <button class="p-4 bg-mainPurple rounded-2xl text-textWhite">
+          Buy Now
+        </button>
+      </div>
+    </div>
+
+    <div class="h-screen horizontal-centering">
+      <div class="enter-pin bg-smallWhite p-5 rounded-2xl">
+        <p class="cancel2 text-end text-3xl">&times;</p>
+
+        <div class="text-center">
+          <h2>Enter Zeenah PIN</h2>
+          <p class="font-light">To confirm beneficiary</p>
+        </div>
+
+        <div class="grid gap-5 grid-cols-4 px-10 py-5">
+          <div class="p-5 border-2 bg-textWhite"></div>
+          <div class="p-5 border-2 bg-textWhite"></div>
+          <div class="p-5 border-2 bg-textWhite"></div>
+          <div class="p-5 border-2 bg-textWhite"></div>
+        </div>
+
+        <div class="show-password">
+          <i class="fa-regular fa-eye eye-icon"></i>
+        </div>
+
+        <div class="text-center text-mainPurple text-xl">
+          <a href="#">Forgot PIN?</a>
+        </div>
+
+        <div
+          class="keys grid grid-cols-3 gap-4 py-5 text-2xl bg-textWhite rounded-2xl my-5"
+        >
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button></button>
+          <button>0</button>
+          <button><i class="fa-solid fa-delete-left"></i></button>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="./script.js"></script>
+  <script
+    src="https://kit.fontawesome.com/fc49c28ef9.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
