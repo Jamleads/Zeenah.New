@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <!-- tailwind CSS -->
+    <style type="text/taiwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+
+    <!-- Tailwind confiq -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mainPurple: '#6A0E95',
+              lightPurple: '#791FA40D',
+              lightPurple2: '#791FA414',
+              textWhite: '#FFFFFF',
+              gray: '#D9D9D9',
+              grayLike: '#F6F6F6',
+              smallWhite: '#DADADA',
+              bgWhite: '#FAF7FB',
+              lightGreen: '#50BD680F',
+              newGreen: '#50BD68',
+              secondGreen: '#199033',
+              lightBlue: '#229ED90F',
+              lightYellow: '#FFB900',
+              deepYellow: '#EBC84D',
+              newLightPurple: 'rgba(169, 0, 228, 0.12)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./img/zeenah.svg" type="image/x-icon" />
+
+    <title>International Airtime</title>
+  </head>
+
+  <body class="airtime">
+    <div class="h-screen blur-section">
+      <div class="min-h-[10%] bg-mainPurple p-5">
+        <h2 class="hedd font-bold text-textWhite text-2xl mb-5">
+          &larr; <span class="ml-2">Buy Airtime</span>
+        </h2>
+      </div>
+
+      <div class="details bg-bgWhite px-5 pt-5 min-h-[90%]">
+        <div class="flex justify-between items-center">
+          <p>Recipient</p>
+          <div class="flex items-center font-bold">
+            <p class="text-mainPurple">Add from contacts</p>
+            <img src="./img/chevron-left.svg" alt="" />
+          </div>
+        </div>
+
+        <div class="w-full rounded-lg border-2 mt-2 mb-5 py-2 bg-transparent">
+          <select
+            name=""
+            id=""
+            class="border-0 border-r-2 outline-0 bg-transparent focus-outline"
+          >
+            <option value="">+234</option>
+            <option value="">+1</option>
+            <option value="">+94</option>
+          </select>
+          <input
+            type="tel"
+            class="border-0 bg-transparent focus-outline w-4/6"
+          />
+        </div>
+
+        <p>Recent</p>
+        <div class="bg-textWhite px-5 py-3 rounded-2xl">
+          <div class="flex justify-between items-center my-4">
+            <p class="font-light">+234 8101074763</p>
+            <div class="flex items-center">
+              <img src="./img/NGN.svg" alt="" />
+              <p class="ml-3">NGN</p>
+            </div>
+          </div>
+
+          <div class="flex justify-between items-center my-4">
+            <p class="font-light">+234 8101074763</p>
+            <div class="flex items-center">
+              <img src="./img/NGN.svg" alt="" />
+              <p class="ml-3">NGN</p>
+            </div>
+          </div>
+
+          <div class="flex justify-between items-center my-4">
+            <p class="font-light">+234 8101074763</p>
+            <div class="flex items-center">
+              <img src="./img/NGN.svg" alt="" />
+              <p class="ml-3">NGN</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <label for="amount">Amount to top up</label>
+          <div class="w-full rounded-lg border-2 mt-2 mb-5 py-2 bg-transparent">
+            <select
+              name=""
+              id=""
+              class="border-0 border-r-2 outline-0 bg-transparent focus-outline"
+            >
+              <option value="">MTN</option>
+              <option value="">GLO</option>
+              <option value="">AIR</option>
+            </select>
+            <input
+              type="tel"
+              class="border-0 bg-transparent focus-outline w-4/6"
+            />
+          </div>
+        </div>
+
+        <button
+          class="next py-3 bg-mainPurple text-textWhite rounded-2xl w-full mt-10"
+        >
+          Next
+        </button>
+      </div>
+
+      <div class="h-screen horizontal-centering p-5">
+        <div class="bg-textWhite px-5 pt-10 rounded-3xl">
+          <h2 class="text-center">Payment preview</h2>
+          <div class="flex justify-between items-center">
+            <p class="">Recipient</p>
+            <p class="">+1 896 7897</p>
+          </div>
+          <div class="flex justify-between items-center my-2">
+            <p class="">Network</p>
+            <p class="">T-Mobile</p>
+          </div>
+          <div class="flex justify-between items-center">
+            <p class="">Amount USD</p>
+            <p class="">$100.00</p>
+          </div>
+
+          <div class="px-5 py-3 bg-grayLike mt-5 rounded-2xl">
+            <div class="flex justify-between items-center">
+              <p>Charges</p>
+              <p class="">$0</p>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <p>Total cost</p>
+              <p class="">N1,000.00</p>
+            </div>
+          </div>
+
+          <div class="grid my-5 grid-cols-2 gap-3 stick-buttom">
+            <button class="p-4 bg-lightPurple2 text-mainPurple rounded-2xl">
+              Cancel
+            </button>
+            <button class="p-4 bg-mainPurple rounded-2xl text-textWhite">
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-screen horizontal-centering p-5">
+      <div class="enter-pin hide bg-smallWhite p-5 rounded-2xl">
+        <p class="cancel2 text-end text-3xl">&times;</p>
+
+        <div class="text-center">
+          <h2>Enter Zeenah PIN</h2>
+          <p class="font-light">To confirm beneficiary</p>
+        </div>
+
+        <div class="grid gap-5 grid-cols-4 px-10 py-5">
+          <div class="p-5 border-2 bg-textWhite"></div>
+          <div class="p-5 border-2 bg-textWhite"></div>
+          <div class="p-5 border-2 bg-textWhite"></div>
+          <div class="p-5 border-2 bg-textWhite"></div>
+        </div>
+
+        <div class="show-password">
+          <i class="fa-regular fa-eye eye-icon"></i>
+        </div>
+
+        <div class="text-center text-mainPurple text-xl">
+          <a href="#">Forgot PIN?</a>
+        </div>
+
+        <div
+          class="keys grid grid-cols-3 gap-4 py-5 text-2xl bg-textWhite rounded-2xl my-5"
+        >
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button></button>
+          <button>0</button>
+          <button><i class="fa-solid fa-delete-left"></i></button>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="./script.js"></script>
+  <script
+    src="https://kit.fontawesome.com/fc49c28ef9.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
