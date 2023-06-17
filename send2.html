@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <!-- tailwind CSS -->
+    <style type="text/taiwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+
+    <!-- Tailwind confiq -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mainPurple: '#6A0E95',
+              lightPurple: '#791FA40D',
+              lightPurple2: '#791FA414',
+              textWhite: '#FFFFFF',
+              gray: '#D9D9D9',
+              grayLike: '#F6F6F6',
+              smallWhite: '#DADADA',
+              bgWhite: '#FAF7FB',
+              lightGreen: '#50BD680F',
+              newGreen: '#50BD68',
+              secondGreen: '#199033',
+              lightBlue: '#229ED90F',
+              lightYellow: '#FFB900',
+              deepYellow: '#EBC84D',
+              newLightPurple: 'rgba(169, 0, 228, 0.12)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./img/zeenah.svg" type="image/x-icon" />
+
+    <title>send amount</title>
+  </head>
+
+  <body class="send-amount">
+    <div class="h-screen bg-bgWhite p-5">
+      <h2 class="text-lg font-bold mb-3">
+        &larr; <span class="ml-2">Send to Zeenah wallet</span>
+      </h2>
+
+      <div class="my-5">
+        <div class="flex items-center rounded-lg border-2 py-2">
+          <div>
+            <select
+              name=""
+              id=""
+              class="border-0 border-r-2 outline-0 bg-transparent"
+            >
+              <option value="">NGN</option>
+              <option value="">USD</option>
+              <option value="">BZR</option>
+            </select>
+            <input
+              type="tel"
+              placeholder="0.0 USD"
+              class="border-0 w-4/6 bg-transparent"
+            />
+          </div>
+          <p class="text-mainPurple font-bold text-right">Max</p>
+        </div>
+        <p class="text-right font-light text-xs">
+          Available - <span class="font-bold">100,000 NGN</span>
+        </p>
+      </div>
+
+      <div class="bg-textWhite px-5 py-10 rounded-3xl">
+        <h2 class="text-center">Payment preview</h2>
+        <div class="mt-5">
+          <div class="flex justify-between items-center">
+            <p class="text-xs">Recipient</p>
+            <p class="text-xs">Reece James</p>
+          </div>
+          <div class="flex justify-between items-center my-2">
+            <p class="text-xs">Recipient email</p>
+            <p class="text-xs">Treecejames@gmail.com</p>
+          </div>
+          <div class="flex justify-between items-center">
+            <p class="text-xs">Amount</p>
+            <p class="text-xs">N50,000.00 NGN</p>
+          </div>
+        </div>
+
+        <div class="px-5 py-3 bg-grayLike mt-5 rounded-2xl">
+          <div class="flex justify-between items-center">
+            <p class="text-xs">Charges</p>
+            <p class="text-xs">$0</p>
+          </div>
+          <div class="flex justify-between items-center mt-2">
+            <p class="text-xs">Total cost</p>
+            <p class="text-xs">N100,000.00</p>
+          </div>
+        </div>
+
+        <div class="grid my-5 grid-cols-2 gap-3 stick-buttom">
+          <button class="px-4 py-2 bg-lightPurple2 text-mainPurple rounded-2xl">
+            Cancel
+          </button>
+          <button class="px-4 py-2 bg-mainPurple rounded-2xl text-textWhite">
+            Buy Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="./script.js"></script>
+  <script
+    src="https://kit.fontawesome.com/fc49c28ef9.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

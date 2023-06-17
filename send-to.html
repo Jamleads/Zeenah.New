@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <!-- tailwind CSS -->
+    <style type="text/taiwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+
+    <!-- Tailwind confiq -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mainPurple: '#6A0E95',
+              lightPurple: '#791FA40D',
+              lightPurple2: '#791FA414',
+              textWhite: '#FFFFFF',
+              gray: '#D9D9D9',
+              grayLike: '#F6F6F6',
+              smallWhite: '#DADADA',
+              bgWhite: '#FAF7FB',
+              lightGreen: '#50BD680F',
+              newGreen: '#50BD68',
+              secondGreen: '#199033',
+              lightBlue: '#229ED90F',
+              lightYellow: '#FFB900',
+              deepYellow: '#EBC84D',
+              newLightPurple: 'rgba(169, 0, 228, 0.12)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./img/zeenah.svg" type="image/x-icon" />
+
+    <title>Send</title>
+  </head>
+
+  <body class="send-to">
+    <div class="h-screen bg-bgWhite p-5">
+      <div class="text-center">
+        <p class="text-lg font-bold">Send funds to</p>
+        <p class="font-light text-xs">
+          Send funds to Zeenah users or to non-Zeenah users directly to their
+          prefered payout option
+        </p>
+      </div>
+
+      <div
+        class="bg-lightPurple2 rounded-lg p-4 flex justify-between items-center mt-10"
+      >
+        <p class="text-mainPurple text-sm font-bold">Zeenah User</p>
+        <img src="./img/chevron-left.svg" alt="" />
+      </div>
+
+      <div
+        class="bg-lightPurple2 rounded-lg p-4 flex justify-between items-center mt-5"
+      >
+        <p class="text-mainPurple text-sm font-bold">Other</p>
+        <img src="./img/chevron-left.svg" alt="" />
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+  <script
+    src="https://kit.fontawesome.com/fc49c28ef9.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

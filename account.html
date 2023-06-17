@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <!-- tailwind CSS -->
+    <style type="text/taiwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+
+    <!-- Tailwind confiq -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mainPurple: '#6A0E95',
+              lightPurple: '#791FA40D',
+              lightPurple2: '#791FA414',
+              textWhite: '#FFFFFF',
+              gray: '#D9D9D9',
+              grayLike: '#F6F6F6',
+              smallWhite: '#DADADA',
+              bgWhite: '#FAF7FB',
+              lightGreen: '#50BD680F',
+              newGreen: '#50BD68',
+              secondGreen: '#199033',
+              lightBlue: '#229ED90F',
+              lightYellow: '#FFB900',
+              deepYellow: '#EBC84D',
+              newLightPurple: 'rgba(169, 0, 228, 0.12)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./img/zeenah.svg" type="image/x-icon" />
+
+    <title>Account</title>
+  </head>
+
+  <body class="account">
+    <div class="h-screen bg-bgWhite p-5">
+      <h2 class="text-lg font-bold mb-3">
+        &larr; <span class="ml-2">Account</span>
+      </h2>
+
+      <div class="bg-textWhite text-center px-3 py-5 rounded-lg">
+        <div>
+          <img src="./img/account.svg" alt="" class="mx-auto" />
+          <img src="" alt="" />
+        </div>
+        <p>Reece James</p>
+        <p class="text-mainPurple text-xs">Zeenah ID: 2641544</p>
+      </div>
+
+      <div class="mt-3 bg-textWhite p-3 rounded-lg">
+        <div class="flex justify-between mt-3">
+          <p class="text-xs">Name</p>
+          <div class="flex items-center">
+            <p class="text-right font-bold text-xs">Reece James</p>
+            <span><img src="./img/edit-3.svg" alt="" /></span>
+          </div>
+        </div>
+
+        <div class="flex justify-between my-5">
+          <p class="text-xs">Mobile number</p>
+          <div class="flex items-center">
+            <p class="text-right font-bold text-xs">+234 8101023567</p>
+            <span><img src="./img/edit-3.svg" alt="" /></span>
+          </div>
+        </div>
+
+        <div class="flex justify-between my-5">
+          <p class="text-xs">Email address</p>
+          <div class="flex items-center">
+            <p class="text-right font-bold text-xs">abc@gmail.com</p>
+            <span><img src="./img/edit-3.svg" alt="" /></span>
+          </div>
+        </div>
+
+        <div class="flex justify-between my-5">
+          <p class="text-xs">Residential address</p>
+          <div class="flex items-center">
+            <p class="text-right font-bold text-xs">15. Onovo Str. Ikeja</p>
+            <span><img src="./img/edit-3.svg" alt="" /></span>
+          </div>
+        </div>
+
+        <div class="flex justify-between mt-5 my-2">
+          <p class="text-xs">KYC Level</p>
+          <div class="flex items-center">
+            <p class="text-right font-bold text-xs">Level 1</p>
+            <span><img src="./img/edit-3.svg" alt="" /></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="./script.js"></script>
+  <script
+    src="https://kit.fontawesome.com/fc49c28ef9.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

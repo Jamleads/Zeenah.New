@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <!-- tailwind CSS -->
+    <style type="text/taiwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+
+    <!-- Tailwind confiq -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mainPurple: '#6A0E95',
+              lightPurple: '#791FA40D',
+              lightPurple2: '#791FA414',
+              textWhite: '#FFFFFF',
+              gray: '#D9D9D9',
+              grayLike: '#F6F6F6',
+              smallWhite: '#DADADA',
+              bgWhite: '#FAF7FB',
+              lightGreen: '#50BD680F',
+              newGreen: '#50BD68',
+              secondGreen: '#199033',
+              lightBlue: '#229ED90F',
+              lightYellow: '#FFB900',
+              deepYellow: '#EBC84D',
+              newLightPurple: 'rgba(169, 0, 228, 0.12)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./img/zeenah.svg" type="image/x-icon" />
+
+    <title>send to Contact</title>
+  </head>
+
+  <body class="contact-send">
+    <div class="h-screen bg-bgWhite p-5">
+      <h2 class="text-lg font-bold mb-3">
+        &larr; <span class="ml-2">Send to Zeenah wallet</span>
+      </h2>
+
+      <div>
+        <div class="flex justify-between items-center">
+          <p class="text-xs">Send to</p>
+          <div class="flex items-center">
+            <p class="text-mainPurple text-xs font-bold">Add from contacts</p>
+            <img src="./img/chevron-left.svg" alt="" />
+          </div>
+        </div>
+        <input
+          type="text"
+          name=""
+          id=""
+          placeholder="Enter user email address"
+          class="w-full rounded-lg bg-transparent px-5"
+        />
+      </div>
+
+      <div class="mt-5">
+        <p>Recent</p>
+        <div class="bg-textWhite p-3 rounded-lg mt-1">
+          <div class="flex justify-between items-center mb-3">
+            <div class="flex items-center">
+              <img src="./img/account.svg" alt="" width="40px" />
+              <div class="ml-3">
+                <p class="text-xs">Reece James</p>
+                <p class="text-xs font-light">reecejames@gmail,com</p>
+              </div>
+            </div>
+
+            <div class="flex items-center">
+              <img src="./img/NGN.svg" alt="" />
+              <p class="ml-2">NGN</p>
+            </div>
+          </div>
+
+          <div class="flex justify-between items-center mb-3">
+            <div class="flex items-center">
+              <img src="./img/account.svg" alt="" width="40px" />
+              <div class="ml-3">
+                <p class="text-xs">Reece James</p>
+                <p class="text-xs font-light">reecejames@gmail,com</p>
+              </div>
+            </div>
+
+            <div class="flex items-center">
+              <img src="./img/NGN.svg" alt="" />
+              <p class="ml-2">NGN</p>
+            </div>
+          </div>
+
+          <div class="flex justify-between items-center mb-3">
+            <div class="flex items-center">
+              <img src="./img/account.svg" alt="" width="40px" />
+              <div class="ml-3">
+                <p class="text-xs">Reece James</p>
+                <p class="text-xs font-light">reecejames@gmail,com</p>
+              </div>
+            </div>
+
+            <div class="flex items-center">
+              <img src="./img/NGN.svg" alt="" />
+              <p class="ml-2">NGN</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="w-full bg-mainPurple p-3 text-textWhite rounded-2xl mt-20"
+        >
+          Continue
+        </button>
+      </div>
+    </div>
+  </body>
+
+  <script src="./script.js"></script>
+  <script
+    src="https://kit.fontawesome.com/fc49c28ef9.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
