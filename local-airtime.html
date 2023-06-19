@@ -63,7 +63,8 @@
     <div class="h-screen blur-section">
       <div class="min-h-[10%] bg-mainPurple p-5">
         <h2 class="hedd font-bold text-textWhite text-2xl mb-5">
-          &larr; <span class="ml-2">Buy Airtime</span>
+          <a href="javascript:history.back()">&larr;</a>
+          <span class="ml-2">Buy Airtime</span>
         </h2>
       </div>
 
@@ -71,8 +72,12 @@
         <div class="flex justify-between items-center">
           <p>Recipient</p>
           <div class="flex items-center font-bold">
-            <p class="text-mainPurple">Add from contacts</p>
-            <img src="./img/chevron-left.svg" alt="" />
+            <p class="text-mainPurple">
+              <a href="./contacts.html">Add from contacts</a>
+            </p>
+            <a href="./contacts.html"
+              ><img src="./img/chevron-left.svg" alt=""
+            /></a>
           </div>
         </div>
 
@@ -146,7 +151,7 @@
       </div>
     </div>
 
-    <div class="h-screen flex flex-col justify-center px-5">
+    <div class="h-screen hidden flex flex-col justify-center px-5">
       <div class="bg-textWhite px-5 pt-10 rounded-3xl">
         <h2 class="text-center">Payment preview</h2>
         <div class="flex justify-between items-center">
@@ -184,7 +189,7 @@
       </div>
     </div>
 
-    <div class="h-screen horizontal-centering">
+    <div class="h-screen hidden horizontal-centering">
       <div class="enter-pin bg-smallWhite p-5 rounded-2xl">
         <p class="cancel2 text-end text-3xl">&times;</p>
 

@@ -62,15 +62,20 @@
   <body class="contact-send">
     <div class="h-screen bg-bgWhite p-5">
       <h2 class="text-lg font-bold mb-3">
-        &larr; <span class="ml-2">Send to Zeenah wallet</span>
+        <a href="javascript:history.back()">&larr;</a>
+        <span class="ml-2">Send to Zeenah wallet</span>
       </h2>
 
       <div>
         <div class="flex justify-between items-center">
           <p class="text-xs">Send to</p>
           <div class="flex items-center">
-            <p class="text-mainPurple text-xs font-bold">Add from contacts</p>
-            <img src="./img/chevron-left.svg" alt="" />
+            <p class="text-mainPurple text-xs font-bold">
+              <a href="./contacts.html">Add from contacts</a>
+            </p>
+            <a href="./contacts.html"
+              ><img src="./img/chevron-left.svg" alt=""
+            /></a>
           </div>
         </div>
         <input

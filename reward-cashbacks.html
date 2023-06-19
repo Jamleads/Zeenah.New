@@ -37,7 +37,8 @@
               lightPurple2: '#791FA414',
               textWhite: '#FFFFFF',
               gray: '#D9D9D9',
-              grayLike: '#F4F4F4',
+              graylike3: '#EFEBF0',
+              grayLike: '#F6F6F6',
               smallWhite: '#DADADA',
               bgWhite: '#FAF7FB',
               lightGreen: '#50BD680F',
@@ -56,53 +57,53 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="./img/zeenah.svg" type="image/x-icon" />
 
-    <title>Create Account</title>
+    <title>Reward Cashbarks</title>
   </head>
 
   <body>
-    <div class="h-screen">
-      <div class="p-5 bg-mainPurple min-h-[15%] flex flex-col justify-center">
-        <h1 class="text-textWhite text-2xl">Create a Zeenah account</h1>
-        <p class="font-light text-gray text-xs">
-          Setup the Name and Email for your account
+    <div class="h-screen bg-bgWhite p-5">
+      <div class="pt-3">
+        <h2 class="font-bold text-2xl">&larr; <span>Reward</span></h2>
+      </div>
+
+      <div class="grid my-3 grid-cols-2 gap-3 p-1 bg-graylike3 rounded-2xl">
+        <button
+          class="py-2 text-xs px-4 bg-textWhite text-mainPurple rounded-2xl"
+        >
+          Cashbacks
+        </button>
+
+        <!-- <a href="./reward-referral.html"> -->
+        <button class="py-2 px-4 text-xs bg-transparent font-bold rounded-2xl">
+          Referrals
+        </button></a>
+      </div>
+
+      <div class="p-5 mt-5 bg-lightPurple2 rounded-2xl">
+        <div class="flex justify-between items-center">
+          <p class="text-xs">Cashback earnings</p>
+          <p class="text-sm font-bold">554 ZINA</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <img src="./img/cashbak.svg" alt="" class="mx-auto mt-5" />
+        <p class="text-xs px-10 font-light">
+          Earn huge cashbacks when you transact on zeeenah now
         </p>
       </div>
 
-      <div class="px-5 py-10 bg-bgWhite min-h-[85%]">
-        <input
-          type="text"
-          placeholder="First and Last names"
-          class="inptt w-full rounded-lg border-2 py-4"
-        />
-        <input
-          type="email"
-          placeholder="Email address"
-          class="inptt w-full rounded-lg border-2 py-4 mt-5"
-        />
-
-        <p class="mt-10 text-center px-10 text-xs">
-          By proceeding, you are agreeing to our
-          <span class="font-bold text-mainPurple">Terms of service</span> and
-          <span class="font-bold text-mainPurple">Privacy policy</span>
-        </p>
-
-        <a href="/create-acc2.html">
-          <button
-            class="py-3 bg-mainPurple text-textWhite rounded-2xl w-full mt-10"
-          >
-            Continue
-          </button>
-        </a>
-
-        <p class="mt-20 text-center">
-          Already have an account?
-          <a href="./login.html" class="font-bold text-mainPurple">Login</a>
-        </p>
+      <div class="mt-5">
+        <button
+          class="w-full bg-mainPurple p-3 text-sm text-textWhite rounded-2xl"
+        >
+          Make transaction
+        </button>
       </div>
     </div>
   </body>
 
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
   <script
     src="https://kit.fontawesome.com/fc49c28ef9.js"
     crossorigin="anonymous"

@@ -32,21 +32,21 @@
         theme: {
           extend: {
             colors: {
-              mainPurple: "#6A0E95",
-              lightPurple: "#791FA40D",
-              lightPurple2: "#791FA414",
-              textWhite: "#FFFFFF",
-              gray: "#D9D9D9",
-              grayLike: "#F4F4F4",
-              smallWhite: "#DADADA",
-              bgWhite: "#FAF7FB",
-              lightGreen: "#50BD680F",
-              newGreen: "#50BD68",
-              secondGreen: "#199033",
-              lightBlue: "#229ED90F",
-              lightYellow: "#FFB900",
-              deepYellow: "#EBC84D",
-              newLightPurple: "rgba(169, 0, 228, 0.12)",
+              mainPurple: '#6A0E95',
+              lightPurple: '#791FA40D',
+              lightPurple2: '#791FA414',
+              textWhite: '#FFFFFF',
+              gray: '#D9D9D9',
+              grayLike: '#F4F4F4',
+              smallWhite: '#DADADA',
+              bgWhite: '#FAF7FB',
+              lightGreen: '#50BD680F',
+              newGreen: '#50BD68',
+              secondGreen: '#199033',
+              lightBlue: '#229ED90F',
+              lightYellow: '#FFB900',
+              deepYellow: '#EBC84D',
+              newLightPurple: 'rgba(169, 0, 228, 0.12)',
             },
           },
         },
@@ -61,7 +61,11 @@
 
   <body>
     <div class="container bg-bgWhite h-screen p-5">
-      <h3 class="text-center my-5">Top up USD</h3>
+      <h2 class="text-2xl font-bold py-3">
+        <a href="javascript:history.back()">&larr;</a>
+        <span class="ml-2">Back</span>
+      </h2>
+      <h3 class="text-center mb-5">Top up USD</h3>
       <div class="grid grid-cols-1 gap-4">
         <div
           class="bg-lightPurple2 flex justify-between items-center py-3 pl-5 rounded-2xl"
@@ -71,6 +75,7 @@
             <p class="ml-2">ZeenahPay</p>
             <img src="./img/zeenah.svg" alt="" class="ml-3" />
           </div>
+
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"

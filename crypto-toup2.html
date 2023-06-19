@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <!-- tailwind CSS -->
+    <style type="text/taiwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+
+    <!-- Tailwind confiq -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mainPurple: '#6A0E95',
+              lightPurple: '#791FA40D',
+              lightPurple2: '#791FA414',
+              textWhite: '#FFFFFF',
+              gray: '#D9D9D9',
+              graylike3: '#EFEBF0',
+              grayLike: '#F6F6F6',
+              smallWhite: '#DADADA',
+              bgWhite: '#FAF7FB',
+              lightGreen: '#50BD680F',
+              newGreen: '#50BD68',
+              secondGreen: '#199033',
+              lightBlue: '#229ED90F',
+              lightYellow: '#FFB900',
+              deepYellow: '#EBC84D',
+              newLightPurple: 'rgba(169, 0, 228, 0.12)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./img/zeenah.svg" type="image/x-icon" />
+
+    <title>Crypto to up</title>
+  </head>
+
+  <body class="Crypto-toup">
+    <div class="h-screen bg-bgWhite p-5">
+      <h2 class="text-2xl font-bold py-5">
+        <a href="javascript:history.back()">&larr;</a>
+        <span class="ml-2">Top up using crypto</span>
+      </h2>
+
+      <div class="text-center mt-5">
+        <img src="./img/bsc-icon.svg" alt="" class="mx-auto" />
+        <p class="text-sm px-10">
+          Send required amount of BNB to this address within:
+          <span class="font-bold text-mainPurple">10:00</span>
+        </p>
+      </div>
+
+      <div class="bg-textWhite p-5 rounded-2xl">
+        <div>
+          <label for="Amount" class="text-sm">Amount</label>
+          <div
+            class="flex justify-between items-center bg-grayLike px-3 py-2 rounded-lg"
+          >
+            <p>0.3077 BNB</p>
+            <img src="./img/copy.svg" alt="" />
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <label for="Amount" class="text-sm">Amount</label>
+          <div
+            class="flex justify-between items-center bg-grayLike px-3 py-2 rounded-lg"
+          >
+            <p class="w-8">bnty2q9jka7qgaui05a88..</p>
+            <img src="./img/copy.svg" alt="" />
+          </div>
+        </div>
+
+        <div class="px-10 mt-10">
+          <div class="bg-mainPurple w-full cryp-wrap">
+            <p class="bg-textWhite py-1 px-5 cryp-wrap-text">or</p>
+          </div>
+        </div>
+
+        <div class="mt-8">
+          <button
+            class="bg-lightPurple2 cryp-btn w-full text-sm text-mainPurple py-3"
+          >
+            Show QR code
+          </button>
+        </div>
+
+        <div class="mt-5">
+          <p class="text-xs font-light text-center">
+            Send only BNB Smart Chain (BNB) to this address. Sending other
+            cryptocurrencies may result to permanent loss.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-8 grid grid-cols-2 gap-5">
+        <button
+          class="bg-lightPurple2 w-full text-sm py-3 text-mainPurple rounded-lg"
+        >
+          Cancel
+        </button>
+        <button
+          class="bg-mainPurple w-full text-xs py-3 text-textWhite rounded-lg"
+        >
+          I have paid
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+  <script
+    src="https://kit.fontawesome.com/fc49c28ef9.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

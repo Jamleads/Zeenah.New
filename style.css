@@ -175,3 +175,13 @@ input[type='checkbox']:checked + .slider {
 input[type='checkbox']:checked + .slider:before {
   transform: translateX(26px);
 }
+
+.cryp-wrap {
+  position: relative;
+  border-bottom: 2px solid gray;
+}
+.cryp-wrap-text {
+  position: absolute;
+  top: -2ex;
+  left: 10ex;
+}
