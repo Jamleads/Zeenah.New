@@ -10,7 +10,7 @@ if (document.querySelector('.splash2')) {
     window.location.href = './onboard.html';
   });
 }
-if (document.querySelector('.phoneOTP') || document.querySelector('.login')) {
+if (document.querySelector('.phoneOTP')) {
   document.querySelector('.submit').addEventListener('click', () => {
     document.querySelector('.blur-section').classList.add('blur');
     document.querySelector('.checked').classList.remove('hide');
@@ -18,6 +18,18 @@ if (document.querySelector('.phoneOTP') || document.querySelector('.login')) {
 
   document.querySelector('.check-con').addEventListener('click', () => {
     window.location.href = './home.html';
+  });
+}
+
+if (document.querySelector('.login')) {
+  document.querySelector('.submit').addEventListener('click', () => {
+    document.querySelector('.blur-section').classList.add('blur');
+    document.querySelector('.checked').classList.remove('hide');
+  });
+
+  document.querySelector('.cancel-bio').addEventListener('click', () => {
+    document.querySelector('.blur-section').classList.remove('blur');
+    document.querySelector('.checked').classList.add('hide');
   });
 }
 
@@ -37,5 +49,3 @@ if (document.querySelector('.airtime')) {
     });
   }
 }
-
-console.log('im on this page');
