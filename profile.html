@@ -15,7 +15,7 @@
 
     <!-- tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+<!--     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script> -->
 
     <!-- tailwind CSS -->
     <style type="text/taiwindcss">
@@ -74,9 +74,11 @@
     <div class="h-screen">
       <div class="min-h-[9rem] bg-mainPurple p-5 profile-wrap">
         <div class="flex justify-between items-center">
-          <p class="text-2xl text-textWhite">My Profile</p>
+          <i class="fas fa-arrow-back" onclick="window.history.back()"></i>
+          <p class="text-2xl text-textWhite">Profile</p>
           <a href="./account.html">
-            <img src="./img/PencilSimpleLine.svg" alt=""></a>
+            <img src="./img/PencilSimpleLine.svg" alt="">
+          </a>
         </div>
 
         <div class="profile-image p-5 bg-red-100 mt-[3rem]">
