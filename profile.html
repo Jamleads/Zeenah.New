@@ -15,7 +15,7 @@
 
     <!-- tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+<!--     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script> -->
 
     <!-- tailwind CSS -->
     <style type="text/taiwindcss">
@@ -24,6 +24,17 @@
           content-visibility: auto;
         }
       }
+      
+      p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        
+        color: #1E1E1E;
+      }
+
     </style>
 
     <!-- Tailwind confiq -->
@@ -61,25 +72,31 @@
 
   <body class="profile">
     <div class="h-screen">
-      <div class="min-h-[15%] bg-mainPurple p-5 profile-wrap">
+      <div class="min-h-[9rem] bg-mainPurple p-5 profile-wrap">
         <div class="flex justify-between items-center">
-          <p class="text-2xl text-textWhite">My profile</p>
+          <span onclick="window.history.back()">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.5846 13H5.41797" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13.0013 20.5832L5.41797 12.9998L13.0013 5.4165" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <p class="text-xl text-textWhite">Profile</p>
           <a href="./account.html">
-            <img src="./img/PencilSimpleLine.svg" alt=""
-          /></a>
+            <svg width="18" height="18" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23.0872 7.45188L18.5484 2.91407C18.3975 2.76314 18.2183 2.64341 18.0211 2.56172C17.824 2.48003 17.6126 2.43799 17.3992 2.43799C17.1858 2.43799 16.9744 2.48003 16.7772 2.56172C16.5801 2.64341 16.4009 2.76314 16.25 2.91407L3.72634 15.4377C3.57478 15.5881 3.45463 15.7671 3.37286 15.9643C3.29108 16.1615 3.24933 16.3729 3.25001 16.5864V21.1252C3.25001 21.5562 3.42121 21.9695 3.72596 22.2743C4.03071 22.579 4.44403 22.7502 4.87501 22.7502H21.9375C22.153 22.7502 22.3597 22.6646 22.512 22.5123C22.6644 22.3599 22.75 22.1532 22.75 21.9377C22.75 21.7223 22.6644 21.5156 22.512 21.3632C22.3597 21.2108 22.153 21.1252 21.9375 21.1252H11.7122L23.0872 9.75024C23.2381 9.59934 23.3579 9.42019 23.4395 9.22301C23.5212 9.02583 23.5633 8.81449 23.5633 8.60106C23.5633 8.38763 23.5212 8.17629 23.4395 7.97912C23.3579 7.78194 23.2381 7.60278 23.0872 7.45188ZM19.5 11.0391L14.9622 6.50024L17.3997 4.06274L21.9375 8.60157L19.5 11.0391Z" fill="#FAF7FB"/>
+            </svg>
+          </a>
         </div>
 
-        <div class="profile-image p-5 bg-red-100">
-          <img src="./img/Checked.svg" alt="" />
+        <div class="profile-image p-5 bg-red-100 mt-[3rem]">
+          <img src="./img/Checked.svg" alt="" style="max-height: 30px;">
         </div>
       </div>
 
-      <div class="min-h-[65%] bg-bgWhite p-5">
-        <div class="mt-10">
-          <p class="font-bold text-2xl">Reece James</p>
-          <p
-            class="bg-lightPurple2 px-2 py-1 w-20 rounded-lg text-center text-mainPurple"
-          >
+      <div class="min-h-[65%] bg-bgWhite p-5 h-screen">
+        <div class="mt-3">
+          <p class="font-bold text-2xl py-1">Reece James</p>
+          <p class="bg-lightPurple2 px-2 py-1 w-20 rounded-lg text-center text-mainPurple">
             Level 1
           </p>
         </div>
@@ -100,12 +117,12 @@
 
         <div class="bg-textWhite p-3 mt-5 overflow-auto">
           <!-- <div> -->
-          <div class="flex mb-3">
+          <div class="flex mb-3 py-2">
             <img src="./img/help-circle.svg" alt="" />
             <p class="ml-3">Help center</p>
           </div>
 
-          <div class="flex mb-3 justify-between items-center">
+          <div class="flex mb-3 justify-between items-center py-2">
             <div class="flex">
               <img src="./img/FingerprintSimple.svg" alt="" />
               <p class="ml-3">Enable biometric login</p>
@@ -117,12 +134,15 @@
             </label>
           </div>
 
-          <div class="flex mb-3">
-            <img src="./img/Lock2.svg" alt="" />
+          <div class="flex mb-3 py-2">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 11H5C3.89543 11 3 11.8954 3 13V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V13C21 11.8954 20.1046 11 19 11Z" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7 11V7C7 5.67392 7.52678 4.40215 8.46447 3.46447C9.40215 2.52678 10.6739 2 12 2C13.3261 2 14.5979 2.52678 15.5355 3.46447C16.4732 4.40215 17 5.67392 17 7V11" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
             <p class="ml-3">Change transaction PIN</p>
           </div>
 
-          <div class="flex mb-3 justify-between items-center">
+          <div class="flex mb-3 justify-between items-center py-2">
             <div class="flex">
               <img src="./img/Notification-icon.svg" alt="" />
               <p class="ml-3">Notifications</p>
@@ -134,21 +154,21 @@
             </label>
           </div>
 
-          <div class="flex mb-3">
+          <div class="flex py-3">
             <img src="./img/star.svg" alt="" />
             <p class="ml-3">Rate this app</p>
           </div>
 
-          <div class="flex mb-3">
+          <div class="flex py-3">
             <img src="./img/Keyhole.svg" alt="" />
             <p class="ml-3">Privacy policy</p>
           </div>
         </div>
       </div>
 
-      <div class="min-h-[10%]">
+      <div class="sticky bottom-0">
         <footer
-          class="flex flex-row items-center justify-around rounded-2xl bg-textWhite py-5 shadow-lg sticky bottom-0"
+          class="flex flex-row items-center justify-around rounded-t-2xl bg-textWhite py-5 shadow-lg sticky bottom-0"
         >
           <div class="flex flex-col items-center">
             <a href="./home.html"

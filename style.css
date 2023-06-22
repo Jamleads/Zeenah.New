@@ -2,6 +2,7 @@ body {
   padding: 0;
   margin: 0;
 }
+  
 .horizontal-centering {
   display: flex;
   flex-direction: column;
@@ -184,4 +185,8 @@ input[type='checkbox']:checked + .slider:before {
   position: absolute;
   top: -2ex;
   left: 10ex;
+}
+
+[type='text']:focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus  {
+  --tw-ring-shadow: transparent;
 }

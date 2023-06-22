@@ -70,11 +70,11 @@
           </p>
         </div>
 
-        <div class="grid gap-5 grid-cols-4 my-5">
-          <div class="p-3 bg-gray rounded-3xl"></div>
-          <div class="p-3 bg-gray rounded-3xl"></div>
-          <div class="p-3 bg-gray rounded-3xl"></div>
-          <div class="p-3 bg-gray rounded-3xl"></div>
+        <div class="grid gap-5 grid-cols-4 my-5 mx-8">
+          <input class="p-3 bg-gray rounded-3xl otp text-center" type="text" oninput='digitValidate(this)' onkeyup='tabChange(1)' maxlength=1 >
+          <input class="p-3 bg-gray rounded-3xl otp text-center" type="text" oninput='digitValidate(this)' onkeyup='tabChange(2)' maxlength=1 >
+          <input class="p-3 bg-gray rounded-3xl otp text-center" type="text" oninput='digitValidate(this)' onkeyup='tabChange(3)' maxlength=1 >
+          <input class="p-3 bg-gray rounded-3xl otp text-center" type="text" oninput='digitValidate(this)' onkeyup='tabChange(4)' maxlength=1 >
         </div>
       </div>
     </div>
@@ -98,8 +98,20 @@
   </body>
 
   <script src="script.js"></script>
-  <script
-    src="https://kit.fontawesome.com/fc49c28ef9.js"
-    crossorigin="anonymous"
-  ></script>
+  <script c="https://kit.fontawesome.com/fc49c28ef9.js"></script>
+  <script>
+      let digitValidate = function (ele) {
+          console.log(ele.value);
+          ele.value = ele.value.replace(/[^0-9]/g, '');
+      }
+  
+      let tabChange = function (val) {
+          let ele = document.querySelectorAll('input');
+          if (ele[val - 1].value != '') {
+              ele[val].focus()
+          } else if (ele[val - 1].value == '') {
+              ele[val - 2].focus()
+          }
+      }
+  </script>
 </html>
