@@ -59,14 +59,9 @@
     <title>Convert</title>
   </head>
 
-  <body>
-    <div class="h-screen">
-      <div class="min-h-[50%] bg-bgWhite p-5">
-        <h2 class="text-2xl font-bold py-5">
-          <a href="javascript:history.back()">&larr;</a>
-          <span class="ml-2">Swap currency</span>
-        </h2>
-
+  <body class="swap-convert">
+    <div class="h-screen blur-section">
+      <div class="bg-bgWhite p-5">
         <div>
           <div class="mb-5">
             <label for="Amount">Amount</label>
@@ -128,7 +123,39 @@
         </div>
       </div>
 
-      <div class="bg-textWhite p-5 rounded-t-2xl">
+      <div class="bg-textWhite">
+        <div
+          class="keys grid grid-cols-3 gap-4 py-5 text-2xl rounded-2xl mt-10"
+        >
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button></button>
+          <button>0</button>
+          <button><i class="fa-solid fa-delete-left"></i></button>
+        </div>
+
+        <div class="px-5">
+          <button
+            class="swap-prev w-full bg-mainPurple py-3 text-xs text-textWhite rounded-lg"
+          >
+            Preview Swap
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal -->
+    <div class="h-screen bg-bgWhite relative swap-modal hidden">
+      <div
+        class="bg-textWhite min-h-[50%] absolute bottom-0 right-0 left-0 p-5 rounded-t-2xl"
+      >
         <h1 class="text-center font-bold text-lg">Confirm swap</h1>
 
         <div class="flex items-center justify-around mt-5">
@@ -158,11 +185,15 @@
           </div>
         </div>
 
-        <div class="grid mt-5 grid-cols-2 gap-3 stick-buttom">
-          <button class="p-4 bg-lightPurple2 text-mainPurple rounded-2xl">
+        <div class="grid mt-5 grid-cols-2 gap-3">
+          <button
+            class="p-4 bg-lightPurple2 text-mainPurple rounded-2xl swap-cancel"
+          >
             Cancel
           </button>
-          <button class="p-4 bg-mainPurple rounded-2xl text-textWhite">
+          <button
+            class="p-4 bg-mainPurple rounded-2xl text-textWhite swap-submit"
+          >
             Swap
           </button>
         </div>
