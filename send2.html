@@ -60,38 +60,69 @@
   </head>
 
   <body class="send-amount">
-    <div class="h-screen bg-bgWhite p-5">
-      <h2 class="text-lg font-bold mb-3">
-        <a href="javascript:history.back()">&larr;</a>
-        <span class="ml-2">Send to Zeenah wallet</span>
-      </h2>
+    <div class="h-screen bg-bgWhite relative">
+      <div class="p-5 send-amount-body">
+        <h2 class="text-lg font-bold mb-3">
+          <a href="javascript:history.back()">&larr;</a>
+          <span class="ml-2">Send to Zeenah wallet</span>
+        </h2>
 
-      <div class="my-5">
-        <div class="flex items-center rounded-lg border-2 py-2">
-          <div>
-            <select
-              name=""
-              id=""
-              class="border-0 border-r-2 outline-0 bg-transparent"
-            >
-              <option value="">NGN</option>
-              <option value="">USD</option>
-              <option value="">BZR</option>
-            </select>
-            <input
-              type="tel"
-              placeholder="0.0 USD"
-              class="border-0 w-4/6 bg-transparent"
-            />
+        <div class="my-5">
+          <div class="flex items-center rounded-lg border-2 py-2">
+            <div>
+              <select
+                name=""
+                id=""
+                class="border-0 border-r-2 outline-0 bg-transparent"
+              >
+                <option value="">NGN</option>
+                <option value="">USD</option>
+                <option value="">BZR</option>
+              </select>
+              <input
+                type="tel"
+                placeholder="0.0 USD"
+                class="border-0 w-4/6 bg-transparent"
+              />
+            </div>
+            <p class="text-mainPurple font-bold text-right">Max</p>
           </div>
-          <p class="text-mainPurple font-bold text-right">Max</p>
+          <p class="text-right font-light text-xs">
+            Available - <span class="font-bold">100,000 NGN</span>
+          </p>
         </div>
-        <p class="text-right font-light text-xs">
-          Available - <span class="font-bold">100,000 NGN</span>
-        </p>
+
+        <div class="bg-textWhite absolute bottom-2 right-0 left-0">
+          <div
+            class="keys grid grid-cols-3 gap-4 py-5 text-2xl rounded-2xl mt-10"
+          >
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button></button>
+            <button>0</button>
+            <button><i class="fa-solid fa-delete-left"></i></button>
+          </div>
+
+          <div class="px-5">
+            <button
+              class="send-prev w-full bg-mainPurple py-3 text-xs text-textWhite rounded-lg"
+            >
+              Preview
+            </button>
+          </div>
+        </div>
       </div>
 
-      <div class="bg-textWhite px-5 py-10 rounded-3xl">
+      <div
+        class="send-modal hidden bg-textWhite px-5 py-10 rounded-3xl absolute bottom-2 right-0 left-0"
+      >
         <h2 class="text-center">Payment preview</h2>
         <div class="mt-5">
           <div class="flex justify-between items-center">
@@ -120,10 +151,14 @@
         </div>
 
         <div class="grid my-5 grid-cols-2 gap-3 stick-buttom">
-          <button class="px-4 py-2 bg-lightPurple2 text-mainPurple rounded-2xl">
+          <button
+            class="cancel-prev px-4 py-2 bg-lightPurple2 text-mainPurple rounded-2xl"
+          >
             Cancel
           </button>
-          <button class="px-4 py-2 bg-mainPurple rounded-2xl text-textWhite">
+          <button
+            class="send-confirm px-4 py-2 bg-mainPurple rounded-2xl text-textWhite"
+          >
             Buy Now
           </button>
         </div>

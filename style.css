@@ -2,7 +2,7 @@ body {
   padding: 0;
   margin: 0;
 }
-  
+
 .horizontal-centering {
   display: flex;
   flex-direction: column;
@@ -62,9 +62,6 @@ body {
   position: absolute;
   right: 0;
 }
-
-/* email template style */
-
 .email-container {
   background-color: #faf7fb;
   height: 100vh;
@@ -133,18 +130,15 @@ body {
   border-radius: 60px;
   border: 2px solid #ffffff;
 }
-
 .switch {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
 }
-
 .switch input[type='checkbox'] {
   display: none;
 }
-
 .slider {
   position: absolute;
   /* cursor: pointer; */
@@ -156,7 +150,6 @@ body {
   transition: 0.4s;
   border-radius: 40px;
 }
-
 .slider:before {
   position: absolute;
   content: '';
@@ -187,6 +180,20 @@ input[type='checkbox']:checked + .slider:before {
   left: 10ex;
 }
 
-[type='text']:focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus  {
+[type='text']:focus,
+[type='email']:focus,
+[type='url']:focus,
+[type='password']:focus,
+[type='number']:focus,
+[type='date']:focus,
+[type='datetime-local']:focus,
+[type='month']:focus,
+[type='search']:focus,
+[type='tel']:focus,
+[type='time']:focus,
+[type='week']:focus,
+[multiple]:focus,
+textarea:focus,
+select:focus {
   --tw-ring-shadow: transparent;
 }

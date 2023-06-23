@@ -69,23 +69,51 @@ if (document.querySelector('.swap-convert')) {
 if (document.querySelector('.transaction-sucessfull')) {
   const urlParams = new URLSearchParams(window.location.search);
   const source = urlParams.get('source');
-  console.log(source);
+
+  if (source === 'send') {
+    document.querySelector('.note-head').textContent = 'Transaction successful';
+    let paragraphs = document.getElementsByTagName('p');
+    paragraphs[0].textContent = 'Transfered NGN 100,000';
+    paragraphs[1].textContent = 'To Reece James';
+
+    document.querySelector('.trac-done').addEventListener('click', () => {
+      window.location.href = './home.html';
+    });
+    document.querySelector('.view-receipt').addEventListener('click', () => {
+      window.location.href = './transaction-receipt.html';
+    });
+  }
 
   if (source === 'convert') {
     document.querySelector('.note-head').textContent = 'Swap successful';
 
-    const paragraphs = document.getElementsByTagName('p');
+    let paragraphs = document.getElementsByTagName('p');
     paragraphs[0].textContent = '';
     paragraphs[1].textContent =
       'You have successfully swapped 100 USD to 74,000 NGN ';
 
-    document.querySelector('.swap-done').addEventListener('click', () => {
+    document.querySelector('.trac-done').addEventListener('click', () => {
       console.log('go back to home');
       window.location.href = './home.html';
     });
-
     document.querySelector('.view-receipt').addEventListener('click', () => {
       console.log('show receipt');
     });
   }
+}
+
+if (document.querySelector('.send-amount')) {
+  document.querySelector('.send-prev').addEventListener('click', () => {
+    document.querySelector('.send-amount-body').classList.add('blur');
+    document.querySelector('.send-modal').classList.remove('hidden');
+  });
+
+  document.querySelector('.cancel-prev').addEventListener('click', () => {
+    document.querySelector('.send-amount-body').classList.remove('blur');
+    document.querySelector('.send-modal').classList.add('hidden');
+  });
+
+  document.querySelector('.send-confirm').addEventListener('click', () => {
+    window.location.href = './tracasction-success.html?source=send';
+  });
 }
