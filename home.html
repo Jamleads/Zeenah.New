@@ -32,15 +32,22 @@
         theme: {
           extend: {
             colors: {
-              mainPurple: "#6A0E95",
-              lightPurple: "#791FA40D",
-              textWhite: "#FFFFFF",
-              smallWhite: "#DADADA",
-              bgWhite: "#FAF7FB",
-              lightGreen: "#50BD680F",
-              lightBlue: "#229ED90F",
-              lightYellow: "#FFB900",
+              mainPurple: '#6A0E95',
+              lightPurple: '#791FA40D',
+              lightPurple2: '#791FA414',
+              textWhite: '#FFFFFF',
+              gray: '#D9D9D9',
+              grayLike: '#F4F4F4',
+              smallWhite: '#DADADA',
+              bgWhite: '#FAF7FB',
+              lightGreen: '#50BD680F',
+              newGreen: '#50BD68',
+              secondGreen: '#199033',
+              lightBlue: '#229ED90F',
+              lightYellow: '#FFB900',
               lighterYellow: '#FFB9000F',
+              deepYellow: '#EBC84D',
+              newLightPurple: 'rgba(169, 0, 228, 0.12)',
             },
           },
         },
@@ -53,122 +60,168 @@
     <title>Zeenah || Home</title>
   </head>
 
- <body>
-    <div class=" container bg-bgWhite p-5 h-screen">
-        <header class="flex flex-row items-center py-3 px-1 mb-5 sticky top-0 bg-bgWhite">
-            <div class="userN basis-1/2">
-                <p class="text-sm">Hello</p>
-                <h4 class="text-lg">Reece</h4>
-            </div>
-            <div class="head-ion basis-1/2 flex flex-row">
-                <img
-                src="./img/support-icon.svg"
-                alt="support-icon"
-                class="w-6 h-6 ml-auto mr-3"
-                />
-                <span
-                ><a href="./notification.html"><img
-                    src="./img/Notification-icon.svg"
-                    alt="Notification-icon"
-                    class="w-6 h-6"
-                /></a></span>
-            </div>
-        </header>
+  <body class="home h-screen relative">
+    <div class="bg-bgWhite p-5">
+      <header
+        class="flex flex-row items-center py-3 px-1 mb-5 sticky top-0 bg-bgWhite"
+      >
+        <div class="userN basis-1/2">
+          <p class="text-sm">Hello</p>
+          <h4 class="text-lg">Reece</h4>
+        </div>
+        <div class="head-ion basis-1/2 flex flex-row">
+          <img
+            src="./img/support-icon.svg"
+            alt="support-icon"
+            class="w-6 h-6 ml-auto mr-3"
+          />
+          <span
+            ><a href="./notification.html"
+              ><img
+                src="./img/Notification-icon.svg"
+                alt="Notification-icon"
+                class="w-6 h-6" /></a
+          ></span>
+        </div>
+      </header>
 
-        <section class=" flex flex-row items-center py-6 px-5 bg-mainPurple rounded-2xl mb-5 shadow-lg">
+      <section
+        class="flex flex-row items-center py-6 px-5 bg-mainPurple rounded-2xl mb-5 shadow-lg"
+      >
         <div class="base1/2">
-            <p class="text-sm text-smallWhite">Naira Balance <span><button> <i class="fa-solid fa-eye"></i></button></span></p>
-            <h4 class="text-lg text-textWhite">&#8358 2,500.67</h4>
+          <p class="text-sm text-smallWhite">
+            Naira Balance
+            <span
+              ><button><i class="fa-solid fa-eye"></i></button
+            ></span>
+          </p>
+          <h4 class="text-lg text-textWhite">&#8358; 2,500.67</h4>
         </div>
-        <div class="currency-select base1/2 ml-auto ">
-            <select name="" id="" class=" ml-auto py-2 bg-textWhite px-8 rounded-2xl">
-                <option value="NGN">NGN</option>
-                <option value="USD">USD</option>
-                <option value="GBP">GBP</option>
-            </select>
+        <div class="currency-select base1/2 ml-auto">
+          <select
+            name=""
+            id=""
+            class="ml-auto py-2 bg-textWhite px-8 rounded-2xl"
+          >
+            <option value="NGN">NGN</option>
+            <option value="USD">USD</option>
+            <option value="GBP">GBP</option>
+          </select>
         </div>
-        </section>
+      </section>
 
-        <section class="flex flex-row items-center justify-around rounded-2xl bg-textWhite py-3 shadow-lg mb-3" >
-            <div class=" flex flex-col items-center">
-                <div class="rounded-lg p-3 bg-lightGreen">  
-                    <a href="./top-up.html"><img src="./img/PlusCircle.svg" alt="" class="w-6 "></a>  
-                </div>
-                <p class="text-x"><a href="./top-up.html">Deposit</a></p>
+      <section
+        class="flex flex-row items-center justify-around rounded-2xl bg-textWhite py-3 shadow-lg mb-3"
+      >
+        <div class="flex flex-col items-center top-up">
+          <div class="rounded-lg p-3 bg-lightGreen">
+            <img src="./img/PlusCircle.svg" alt="" class="w-6" />
+          </div>
+          <p class="text-x">Deposit</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="rounded-lg p-3 bg-lightBlue">
+            <a href="./convert.html"
+              ><img src="./img/swap-icon.svg" alt="" class="w-6"
+            /></a>
+          </div>
+          <a href="./convert.html"><p>Swap</p></a>
+        </div>
+        <div class="flex flex-col items-center send">
+          <div class="rounded-lg p-3 bg-lighterYellow">
+            <img src="./img/PaperPlaneTilt.svg" alt="" class="w-6" />
+          </div>
+          <p>Send</p>
+        </div>
+      </section>
+
+      <section>
+        <h3 class="mb-1">Services</h3>
+        <div
+          class="flex flex-row items-center justify-around rounded-2xl bg-textWhite py-3 shadow-lg mb-5"
+        >
+          <div class="flex flex-col items-center">
+            <div class="rounded-lg p-3 bg-lightPurple">
+              <a href="./inter-airtime.html"
+                ><img src="./img/DeviceMobile.svg" alt="" class="w-6"
+              /></a>
             </div>
-            <div class="flex flex-col items-center">
-                <div class="rounded-lg p-3 bg-lightBlue">
-                    <a href="./convert.html"><img src="./img/swap-icon.svg" alt="" class="w-6"></a>
-                </div>
-                <a href="./convert.html"><p>Swap</p></a>
+            <a href="./inter-airtime.html"><p>Airtime</p></a>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="rounded-lg p-3 bg-lightPurple">
+              <a href="./gift-card.html"
+                ><img src="./img/Cardholder.svg" alt="" class="w-6"
+              /></a>
             </div>
-            <div class="flex flex-col items-center">
-                <div class="rounded-lg p-3 bg-lighterYellow">
-                    <a href="./send-to.html"><img src="./img/PaperPlaneTilt.svg" alt="" class="w-6"></a>
-                </div>
-                <a href="./send-to.html"><p>Send</p></a>
-                
+            <a href="./gift-card.html"><p>Gift cards</p></a>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="rounded-lg p-3 bg-lightPurple">
+              <a href="./local-airtime.html"
+                ><img src="./img/WifiHigh.svg" alt="" class="w-6"
+              /></a>
             </div>
-        </section>
-
-        <section>
-            <h3 class="mb-1">Services</h3>
-            <div class="flex flex-row items-center justify-around rounded-2xl bg-textWhite py-3 shadow-lg mb-5">
-                <div class="flex flex-col items-center">
-                    <div class="rounded-lg p-3 bg-lightPurple">
-                        <a href="./inter-airtime.html"><img src="./img/DeviceMobile.svg" alt="" class="w-6"></a>
-                    </div>
-                    <a href="./inter-airtime.html"><p>Airtime</p></a>
-                </div>    
-                <div class="flex flex-col items-center">
-                    <div class="rounded-lg p-3 bg-lightPurple">
-                        <a href="./gift-card.html"><img src="./img/Cardholder.svg" alt="" class="w-6"></a>
-                    </div>
-                    <a href="./gift-card.html"><p>Gift cards</p></a>
-                </div>    
-                <div class="flex flex-col items-center">
-                    <div class="rounded-lg p-3 bg-lightPurple">
-                        <a href="./local-airtime.html"><img src="./img/WifiHigh.svg" alt="" class="w-6"></a>
-                    </div>
-                    <a href="./local-airtime.html"><p>Data</p></a>
-                </div>    
-                <div class="flex flex-col items-center">
-                    <div class="rounded-lg p-3 bg-lightPurple">
-                        <a href="./utility.html"><img src="./img/Receipt.svg" alt="" class="w-6"></a>
-                    </div>
-                    <p><a href="./utility.html">Utilities</a></p>
-                </div>    
+            <a href="./local-airtime.html"><p>Data</p></a>
+          </div>
+          <div class="flex flex-col items-center utility">
+            <div class="rounded-lg p-3 bg-lightPurple">
+              <img src="./img/Receipt.svg" alt="" class="w-6" />
             </div>
-        </section>
+            <p>Utilities</p>
+          </div>
+        </div>
+      </section>
 
-        <section class="flex flex-row items-center justify-between rounded-2xl bg-textWhite py-3 px-5 shadow-lg mb-5">
-            <div class="">
-                <h3 class="text-xl"><a href="./set-pin.html">Set transaction pin</a></h3>
-                <p class="text-sm font-light"><a href="./set-pin.html">Set transaction pin for transaction approvals</a></p>
-            </div>
+      <section
+        class="flex flex-row items-center justify-between rounded-2xl bg-textWhite py-3 px-5 shadow-lg mb-5"
+      >
+        <div class="">
+          <h3 class="text-xl">
+            <a href="./set-pin.html">Set transaction pin</a>
+          </h3>
+          <p class="text-sm font-light">
+            <a href="./set-pin.html"
+              >Set transaction pin for transaction approvals</a
+            >
+          </p>
+        </div>
 
-            <a href="./set-pin.html"><img src="./img/CheckCircle.svg" alt=""></a>
-        </section>
+        <a href="./set-pin.html"><img src="./img/CheckCircle.svg" alt="" /></a>
+      </section>
 
-        <section class="flex flex-row items-center justify-between rounded-2xl bg-textWhite p-3 shadow-lg mb-5" >
-            <div class="flex flex-row">
-                <div>
-                    <img src="./img/WarningCircle.svg" alt="" w-8>
-                </div>
-                <div class="ml-3">
-                    
-                    <h3 class="text-xl"><a href="./KYC-level1.html">Complete KYC</a></h3>
-                    <p class="text-sm font-light"><a href="./KYC-level1.html">Complete KYC to unlock Payout transactions over $100</a></p>
-                </div>
-            </div>
+      <section
+        class="flex flex-row items-center justify-between rounded-2xl bg-textWhite p-3 shadow-lg mb-5"
+      >
+        <div class="flex flex-row">
+          <div>
+            <img src="./img/WarningCircle.svg" alt="" w-8 />
+          </div>
+          <div class="ml-3">
+            <h3 class="text-xl">
+              <a href="./KYC-level1.html">Complete KYC</a>
+            </h3>
+            <p class="text-sm font-light">
+              <a href="./KYC-level1.html"
+                >Complete KYC to unlock Payout transactions over $100</a
+              >
+            </p>
+          </div>
+        </div>
 
-            <a href="./KYC-level1.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-10 w-10 transform -rotate-90">
-                <path fill-rule="evenodd" d="M10 12l-5-5h10l-5 5z" />
-            </svg></a>
-        </section>
-        
+        <a href="./KYC-level1.html"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="h-10 w-10 transform -rotate-90"
+          >
+            <path fill-rule="evenodd" d="M10 12l-5-5h10l-5 5z" />
+          </svg>
+        </a>
+      </section>
 
-        <!-- <section class="carousel">
+      <!-- <section class="carousel">
             <div class="carousel-inner">
                 <div class="carusel-item">
                     <img src="./img/zeenahapp-20221213-0002.png" alt="image1">
@@ -185,25 +238,178 @@
         </section> -->
     </div>
 
-    <footer class="flex flex-row items-center justify-around rounded-2xl bg-textWhite py-5 shadow-lg sticky bottom-0">
-        <div class="flex flex-col items-center">
-            <a href="./home.html"><img src="./img/House.svg" alt="" class="w-6"></a>
-            <p class="text-xs"><a href="./home.html">Home</a></p>
-        </div>    
-        <div class="flex flex-col items-center">
-            <a href="./trasaction-history.html"><img src="./img/ArrowsLeftRight.svg" alt="" class="w-6"></a>
-            <p class="text-xs"><a href="./trasaction-history.html">Transactions</a></p>
-        </div>    
-        <div class="flex flex-col items-center">
-            <a href="./credit-card.html"><img src="./img/CreditCard.svg" alt="" class="w-6"></a>
-            <p class="text-xs"><a href="./credit-card.html">Cards</a></p>
-        </div>    
-        <div class="flex flex-col items-center">
-            <a href="./profile.html"><img src="./img/User.svg" alt="" class="w-6"></a>
-            <p class="text-xs"><a href="./profile.html">Profiile</a></p>
-        </div>    
-    </footer>
+    <div class="hide top-up-modal bg-bgWhite w-full px-5">
+      <h2 class="py-3 close-modal">Cancel</h2>
+      <h3 class="text-center mb-5">Top up USD</h3>
+      <div class="grid grid-cols-1 gap-4">
+        <div
+          class="bg-lightPurple2 flex justify-between items-center py-3 pl-5 rounded-2xl"
+        >
+          <div class="flex items-center">
+            <input type="radio" />
+            <p class="ml-2">ZeenahPay</p>
+            <img src="./img/zeenah.svg" alt="" class="ml-3" />
+          </div>
 
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="h-10 w-10 transform -rotate-90"
+          >
+            <path fill-rule="evenodd" d="M10 12l-5-5h10l-5 5z" />
+          </svg>
+        </div>
+
+        <div
+          class="bg-lightPurple2 flex justify-between items-center py-3 pl-5 rounded-2xl"
+        >
+          <div class="flex items-center">
+            <input type="radio" />
+            <p class="ml-2">Top up using card</p>
+            <img src="./img/logos_visa.svg" alt="" class="ml-3" />
+            <img src="./img/logos_mastercard.svg" alt="" class="ml-3" />
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="h-10 w-10 transform -rotate-90"
+          >
+            <path fill-rule="evenodd" d="M10 12l-5-5h10l-5 5z" />
+          </svg>
+        </div>
+
+        <div
+          class="bg-lightPurple2 flex justify-between items-center py-3 pl-5 rounded-2xl"
+        >
+          <div class="flex items-center">
+            <input type="radio" />
+            <p class="ml-2">Top up using crypto</p>
+            <img src="./img/crypto.svg" alt="" class="ml-3" />
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="h-10 w-10 transform -rotate-90"
+          >
+            <path fill-rule="evenodd" d="M10 12l-5-5h10l-5 5z" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="my-10">
+        <button class="bg-mainPurple py-3 w-full text-textWhite rounded-2xl">
+          Continue
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-bgWhite p-5 send-modal hide">
+      <h2 class="py-3 close-send-modal">Cancel</h2>
+      <div class="text-center">
+        <p class="text-lg font-bold">Send funds to</p>
+        <p class="font-light text-xs">
+          Send funds to Zeenah users or to non-Zeenah users directly to their
+          prefered payout option
+        </p>
+      </div>
+
+      <div
+        class="bg-lightPurple2 rounded-lg p-4 flex justify-between items-center mt-10"
+      >
+        <p class="text-mainPurple text-sm font-bold">
+          <a href="./zeenah-user-send.html">Zeenah User</a>
+        </p>
+        <a href="./zeenah-user-send.html"
+          ><img src="./img/chevron-left.svg" alt=""
+        /></a>
+      </div>
+
+      <div
+        class="bg-lightPurple2 rounded-lg p-4 flex justify-between items-center mt-5"
+      >
+        <p class="text-mainPurple text-sm font-bold">
+          <a href="./contacts.html">Other</a>
+        </p>
+        <a href="./contacts.html"
+          ><img src="./img/chevron-left.svg" alt=""
+        /></a>
+      </div>
+    </div>
+
+    <div class="container bg-bgWhite p-5 utility-modal hide">
+      <h2 class="py-3 close-utility-modal">Cancel</h2>
+      <h3 class="text-center my-5">Top up USD</h3>
+      <div class="grid grid-cols-1 gap-4">
+        <div
+          class="bg-lightPurple2 flex justify-between items-center py-3 pl-5 rounded-2xl"
+        >
+          <div class="flex items-center">
+            <img src="./img/zeenah.svg" alt="" class="ml-3" />
+            <p class="ml-2">Electricity</p>
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="h-10 w-10 transform -rotate-90"
+          >
+            <path fill-rule="evenodd" d="M10 12l-5-5h10l-5 5z" />
+          </svg>
+        </div>
+
+        <div
+          class="bg-lightPurple2 flex justify-between items-center py-3 pl-5 rounded-2xl"
+        >
+          <div class="flex items-center">
+            <img src="./img/TelevisionSimple.svg" alt="" class="ml-3" />
+            <p class="ml-2">Cable</p>
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="h-10 w-10 transform -rotate-90"
+          >
+            <path fill-rule="evenodd" d="M10 12l-5-5h10l-5 5z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="overlay hide"></div>
+
+    <footer
+      class="flex flex-row items-center justify-around rounded-2xl bg-textWhite py-5 shadow-lg sticky bottom-0"
+    >
+      <div class="flex flex-col items-center">
+        <a href="./home.html"
+          ><img src="./img/House.svg" alt="" class="w-6"
+        /></a>
+        <p class="text-xs"><a href="./home.html">Home</a></p>
+      </div>
+      <div class="flex flex-col items-center">
+        <a href="./trasaction-history.html"
+          ><img src="./img/ArrowsLeftRight.svg" alt="" class="w-6"
+        /></a>
+        <p class="text-xs">
+          <a href="./trasaction-history.html">Transactions</a>
+        </p>
+      </div>
+      <div class="flex flex-col items-center">
+        <a href="./credit-card.html"
+          ><img src="./img/CreditCard.svg" alt="" class="w-6"
+        /></a>
+        <p class="text-xs"><a href="./credit-card.html">Cards</a></p>
+      </div>
+      <div class="flex flex-col items-center">
+        <a href="./profile.html"
+          ><img src="./img/User.svg" alt="" class="w-6"
+        /></a>
+        <p class="text-xs"><a href="./profile.html">Profiile</a></p>
+      </div>
+    </footer>
   </body>
 
   <script src="script.js"></script>

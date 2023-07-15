@@ -117,3 +117,46 @@ if (document.querySelector('.send-amount')) {
     window.location.href = './tracasction-success.html?source=send';
   });
 }
+
+if (document.querySelector('.home')) {
+  const topUp = document.querySelector('.top-up');
+  const topUpModal = document.querySelector('.top-up-modal');
+  const closeModal = document.querySelector('.close-modal');
+  const overlay = document.querySelector('.overlay');
+
+  topUp.addEventListener('click', () => {
+    topUpModal.classList.remove('hide');
+    overlay.classList.remove('hide');
+  });
+  closeModal.addEventListener('click', () => {
+    topUpModal.classList.add('hide');
+    overlay.classList.add('hide');
+  });
+
+  const send = document.querySelector('.send');
+  const sendModal = document.querySelector('.send-modal');
+  const closeSendModal = document.querySelector('.close-send-modal');
+
+  send.addEventListener('click', () => {
+    sendModal.classList.remove('hide');
+    overlay.classList.remove('hide');
+  });
+
+  closeSendModal.addEventListener('click', () => {
+    sendModal.classList.add('hide');
+    overlay.classList.add('hide');
+  });
+
+  const utility = document.querySelector('.utility');
+  const utilityModal = document.querySelector('.utility-modal');
+  const closeUtilityModal = document.querySelector('.close-utility-modal');
+
+  utility.addEventListener('click', () => {
+    utilityModal.classList.remove('hide');
+    overlay.classList.remove('hide');
+  });
+  closeUtilityModal.addEventListener('click', () => {
+    utilityModal.classList.add('hide');
+    overlay.classList.add('hide');
+  });
+}
