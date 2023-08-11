@@ -203,7 +203,7 @@ select:focus {
 
 .top-up-modal {
   position: absolute;
-  top: 15%;
+  bottom: 0;
   left: 0;
   z-index: 10;
 }
@@ -211,9 +211,10 @@ select:focus {
 .send-modal,
 .utility-modal {
   position: absolute;
-  top: 35%;
+  bottom: 0;
   left: 0;
   z-index: 10;
+  transition: ease-in-out 0.2s;
 }
 .overlay {
   position: absolute;

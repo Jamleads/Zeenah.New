@@ -32,17 +32,17 @@
         theme: {
           extend: {
             colors: {
-              mainPurple: "#6A0E95",
-              lightPurple: "#791FA40D",
-              lightPurple2: "#791FA414",
-              textWhite: "#FFFFFF",
-              smallWhite: "#DADADA",
-              bgWhite: "#FAF7FB",
-              lightGreen: "#50BD680F",
-              gray: "#D9D9D9",
-              lightBlue: "#229ED90F",
-              lightYellow: "#FFB900",
-              lighterYellow: "#FFB9000F",
+              mainPurple: '#6A0E95',
+              lightPurple: '#791FA40D',
+              lightPurple2: '#791FA414',
+              textWhite: '#FFFFFF',
+              smallWhite: '#DADADA',
+              bgWhite: '#FAF7FB',
+              lightGreen: '#50BD680F',
+              gray: '#D9D9D9',
+              lightBlue: '#229ED90F',
+              lightYellow: '#FFB900',
+              lighterYellow: '#FFB9000F',
             },
           },
         },
@@ -55,7 +55,7 @@
     <title>Zeenah || Set Pin</title>
   </head>
 
-  <body class="h-screen">
+  <body class="set-pin h-screen">
     <div class="container p-5 bg-bgWhite h-3/5">
       <div class="flex flex-col justify-center items-center gap-5 mt-20">
         <div class="p-3 rounded-lg bg-lightPurple2">
@@ -71,47 +71,93 @@
         </div>
 
         <div class="grid gap-5 grid-cols-4 my-5 mx-8">
-          <input class="p-3 bg-gray rounded-3xl otp text-center" type="text" oninput='digitValidate(this)' onkeyup='tabChange(1)' maxlength=1 >
-          <input class="p-3 bg-gray rounded-3xl otp text-center" type="text" oninput='digitValidate(this)' onkeyup='tabChange(2)' maxlength=1 >
-          <input class="p-3 bg-gray rounded-3xl otp text-center" type="text" oninput='digitValidate(this)' onkeyup='tabChange(3)' maxlength=1 >
-          <input class="p-3 bg-gray rounded-3xl otp text-center" type="text" oninput='digitValidate(this)' onkeyup='tabChange(4)' maxlength=1 >
+          <div
+            class="w-[45px] h-[45px] bg-gray rounded-full flex items-center justify-center"
+          >
+            <input
+              class="display1 p-3 bg-transparent w-full border-0 otp text-center"
+              type="text"
+              oninput="digitValidate(this)"
+              onkeyup="tabChange(1)"
+              maxlength="1"
+            />
+          </div>
+
+          <div
+            class="w-[45px] h-[45px] bg-gray rounded-full flex items-center justify-center"
+          >
+            <input
+              class="display2 p-3 bg-transparent w-full border-0 otp text-center"
+              type="text"
+              oninput="digitValidate(this)"
+              onkeyup="tabChange(2)"
+              maxlength="1"
+            />
+          </div>
+
+          <div
+            class="w-[45px] h-[45px] bg-gray rounded-full flex items-center justify-center"
+          >
+            <input
+              class="display3 p-3 bg-transparent w-full border-0 otp text-center"
+              type="text"
+              oninput="digitValidate(this)"
+              onkeyup="tabChange(3)"
+              maxlength="1"
+            />
+          </div>
+
+          <div
+            class="w-[45px] h-[45px] bg-gray rounded-full flex items-center justify-center"
+          >
+            <input
+              class="display4 p-3 bg-transparent w-full border-0 otp text-center"
+              type="text"
+              oninput="digitValidate(this)"
+              onkeyup="tabChange(4)"
+              maxlength="1"
+            />
+          </div>
         </div>
       </div>
     </div>
 
-    <div
-      class="keys grid grid-cols-3 gap-4 py-5 text-2xl bg-textWhite rounded-2xl mb-5"
-    >
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button>4</button>
-      <button>5</button>
-      <button>6</button>
-      <button>7</button>
-      <button>8</button>
-      <button>9</button>
-      <button></button>
-      <button>0</button>
-      <button><i class="fa-solid fa-delete-left"></i></button>
+    <div class="p-5 bg-textWhite rounded-2xl">
+      <div class="cal-keys keys grid grid-cols-3 gap-4 text-2xl mb-5">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button></button>
+        <button>0</button>
+        <button data-action="clear" class="clear">X</button>
+      </div>
+      <button class="w-full p-4 bg-mainPurple rounded-2xl text-textWhite">
+        <a href="./home.html">Proceed</a>
+      </button>
     </div>
   </body>
 
   <script src="script.js"></script>
   <script c="https://kit.fontawesome.com/fc49c28ef9.js"></script>
   <script>
-      let digitValidate = function (ele) {
-          console.log(ele.value);
-          ele.value = ele.value.replace(/[^0-9]/g, '');
+    let digitValidate = function (ele) {
+      console.log(ele.value);
+      ele.value = ele.value.replace(/[^0-9]/g, '');
+    };
+
+    let tabChange = function (val) {
+      let ele = document.querySelectorAll('input');
+      if (ele[val - 1].value != '') {
+        ele[val].focus();
+      } else if (ele[val - 1].value == '') {
+        ele[val - 2].focus();
       }
-  
-      let tabChange = function (val) {
-          let ele = document.querySelectorAll('input');
-          if (ele[val - 1].value != '') {
-              ele[val].focus()
-          } else if (ele[val - 1].value == '') {
-              ele[val - 2].focus()
-          }
-      }
+    };
   </script>
 </html>

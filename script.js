@@ -160,3 +160,54 @@ if (document.querySelector('.home')) {
     overlay.classList.add('hide');
   });
 }
+
+if (document.querySelector('.set-pin')) {
+  const key = document.querySelector('.cal-keys');
+  const display1 = document.querySelector('.display1');
+  const display2 = document.querySelector('.display2');
+  const display3 = document.querySelector('.display3');
+  const display4 = document.querySelector('.display4');
+  const clearBtn = document.querySelector('.clear');
+
+  key.addEventListener('click', function (e) {
+    if (e.target.matches('button')) {
+      const key = e.target;
+      const action = key.dataset.action;
+      const keyContent = key.textContent;
+      const currentValue1 = display1.value;
+      const currentValue2 = display2.value;
+      const currentValue3 = display3.value;
+      const currentValue4 = display4.value;
+
+      if (!action) {
+        if (currentValue1 === '') {
+          display1.value = currentValue1 + keyContent;
+        } else if (currentValue2 === '') {
+          display2.value = currentValue2 + keyContent;
+        } else if (currentValue3 === '') {
+          display3.value = currentValue3 + keyContent;
+        } else if (currentValue4 === '') {
+          display4.value = currentValue4 + keyContent;
+        }
+      }
+
+      if (display4.value) {
+        if (action === 'clear') {
+          display4.value = '';
+        }
+      } else if (display3.value) {
+        if (action === 'clear') {
+          display3.value = '';
+        }
+      } else if (display2.value) {
+        if (action === 'clear') {
+          display2.value = '';
+        }
+      } else if (display1.value) {
+        if (action === 'clear') {
+          display1.value = '';
+        }
+      }
+    }
+  });
+}
