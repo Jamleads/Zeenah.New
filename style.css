@@ -195,8 +195,10 @@ input[type='checkbox']:checked + .slider:before {
 [type='week']:focus,
 [multiple]:focus,
 textarea:focus,
+input:focus,
 select:focus {
   --tw-ring-shadow: transparent;
+  outline: none;
 }
 
 .top-up-modal {
