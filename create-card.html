@@ -26,7 +26,7 @@
       }
     </style>
 
-    
+    <script>
       tailwind.config = {
         theme: {
           extend: {
@@ -59,7 +59,7 @@
     <title>Create Card</title>
   </head>
 
-  <body class="creat-card">
+  <body class="create-card">
     <div class="h-screen bg-bgWhite p-5">
       <h2 class="font-bold text-2xl">
         <a href="javascript:history.back()">&larr;</a>
@@ -158,13 +158,16 @@
         </div>
       </div>
 
-      <button class="py-3 bg-mainPurple text-textWhite rounded-2xl w-full mt-5">
+      <button
+        class="create-card-btn py-3 bg-mainPurple text-textWhite rounded-2xl w-full mt-5"
+      >
         Submit
       </button>
     </div>
 
-    <div class="p-5">
-      <div class="bg-textWhite">
+    <div class="creat-card-modal hide p-5 w-full bg-textWhite">
+      <p class="close-modal">cancel</p>
+      <div class="">
         <p class="text-center font-bold text-lg">Create Virtual master card</p>
 
         <div class="bg-lightPurple2 py-2 px-5 mt-3">
@@ -191,6 +194,7 @@
         </button>
       </div>
     </div>
+    <div class="overlay hide"></div>
   </body>
 
   <script src="./script.js"></script>

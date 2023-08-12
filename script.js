@@ -161,6 +161,22 @@ if (document.querySelector('.home')) {
   });
 }
 
+if (document.querySelector('.create-card')) {
+  const createCardBtn = document.querySelector('.create-card-btn');
+  const createCardModal = document.querySelector('.creat-card-modal');
+  const closeModal = document.querySelector('.close-modal');
+  const overlay = document.querySelector('.overlay');
+
+  createCardBtn.addEventListener('click', () => {
+    createCardModal.classList.remove('hide');
+    overlay.classList.remove('hide');
+  });
+  closeModal.addEventListener('click', () => {
+    createCardModal.classList.add('hide');
+    overlay.classList.add('hide');
+  });
+}
+
 if (document.querySelector('.set-pin')) {
   const key = document.querySelector('.cal-keys');
   const display1 = document.querySelector('.display1');
