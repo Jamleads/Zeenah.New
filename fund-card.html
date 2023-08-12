@@ -68,7 +68,7 @@
         </h2>
       </div>
 
-      <div class="min-h-[40%] bg-bgWhite p-5">
+      <div class="h-screen bg-bgWhite p-5">
         <div>
           <label for="Amount" class="font-light text-sm">Amount</label>
           <div class="bg-transparent p-1 text-center border-2 rounded-2xl">
@@ -82,100 +82,154 @@
           <p class="text-right text-sm font-light">
             USD Wallet balance - <span>100,000 USD</span>
           </p>
-        </div>
-      </div>
-
-      <div class="checked bg-textWhite px-5 pt-10 rounded-t-3xl">
-        <h2 class="text-center">Confirm Transaction</h2>
-        <div class="trac-wraper mt-7">
-          <p class="p-wrap">Card name</p>
-          <p class="p-wrap2">Reece James</p>
-        </div>
-        <div class="trac-wraper mt-7">
-          <p class="p-wrap">Amount</p>
-          <p class="p-wrap2">$100.00</p>
-        </div>
-
-        <div class="px-5 py-3 bg-grayLike mt-5 rounded-2xl">
-          <div class="flex justify-between items-center">
-            <p>Charges</p>
-            <p class="text-mainPurple font-bold">$1</p>
-          </div>
-          <div class="flex justify-between items-center mt-2">
-            <p>Total cost</p>
-            <p class="text-mainPurple font-bold">$101.00</p>
-          </div>
-        </div>
-
-        <div class="grid my-5 grid-cols-2 gap-3 stick-buttom">
-          <button class="p-4 bg-lightPurple2 text-mainPurple rounded-2xl">
-            Cancel
-          </button>
-          <button class="p-4 bg-mainPurple rounded-2xl text-textWhite">
-            Fund Card
-          </button>
-        </div>
-      </div>
-
-      <div class="h-screen horizontal-centering">
-        <div class="enter-pin bg-smallWhite p-5 rounded-2xl">
-          <p class="cancel2 text-end text-3xl">&times;</p>
-
-          <div class="text-center">
-            <h2>Enter Zeenah PIN</h2>
-            <p class="font-light">To confirm beneficiary</p>
-          </div>
-
-          <div class="grid gap-5 grid-cols-4 px-10 py-5">
-            <div class="p-5 border-2 bg-textWhite"></div>
-            <div class="p-5 border-2 bg-textWhite"></div>
-            <div class="p-5 border-2 bg-textWhite"></div>
-            <div class="p-5 border-2 bg-textWhite"></div>
-          </div>
-
-          <div class="show-password">
-            <i class="fa-regular fa-eye eye-icon"></i>
-          </div>
-
-          <div class="text-center text-mainPurple text-xl">
-            <a href="#">Forgot PIN?</a>
-          </div>
-
-          <div
-            class="keys grid grid-cols-3 gap-4 py-5 text-2xl bg-textWhite rounded-2xl my-5"
-          >
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button></button>
-            <button>0</button>
-            <button><i class="fa-solid fa-delete-left"></i></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="h-screen bg-red-100 px-5 flex flex-col justify-center">
-        <div class="bg-textWhite p-3 text-center rounded-2xl">
-          <img src="./img/trac-suc.svg" alt="" class="mx-auto" />
-          <p class="font-bold text-lg">Top up successful</p>
-          <p class="text-sm font-light px-10">
-            You have successfully topped up 100 USD to your virtual card
-          </p>
-
           <button
-            class="bg-mainPurple rounded-2xl px-14 text-sm py-3 mt-3 text-textWhite"
+            class="continue-btn p-3 mt-3 w-full bg-mainPurple rounded-2xl text-textWhite"
           >
-            Done
+            Continue
           </button>
         </div>
       </div>
     </div>
+
+    <div
+      class="fund-card-confirm-modal hide checked bg-textWhite px-5 pt-10 rounded-t-3xl"
+    >
+      <h2 class="text-center">Confirm Transaction</h2>
+      <div class="trac-wraper mt-7">
+        <p class="p-wrap">Card name</p>
+        <p class="p-wrap2">Reece James</p>
+      </div>
+      <div class="trac-wraper mt-7">
+        <p class="p-wrap">Amount</p>
+        <p class="p-wrap2">$100.00</p>
+      </div>
+
+      <div class="px-5 py-3 bg-grayLike mt-5 rounded-2xl">
+        <div class="flex justify-between items-center">
+          <p>Charges</p>
+          <p class="text-mainPurple font-bold">$1</p>
+        </div>
+        <div class="flex justify-between items-center mt-2">
+          <p>Total cost</p>
+          <p class="text-mainPurple font-bold">$101.00</p>
+        </div>
+      </div>
+
+      <div class="grid my-5 grid-cols-2 gap-3 stick-buttom">
+        <button
+          class="close-modal p-4 bg-lightPurple2 text-mainPurple rounded-2xl"
+        >
+          Cancel
+        </button>
+        <button
+          class="fund-card-btn p-4 bg-mainPurple rounded-2xl text-textWhite"
+        >
+          Fund Card
+        </button>
+      </div>
+    </div>
+
+    <div class="enter-pin-modal hide bg-smallWhite p-5 rounded-2xl">
+      <p class="cancel2 text-end text-3xl">&times;</p>
+
+      <div class="text-center">
+        <h2>Enter Zeenah PIN</h2>
+        <p class="font-light">To confirm beneficiary</p>
+      </div>
+
+      <div class="grid gap-5 grid-cols-4 my-5 mx-8">
+        <div
+          class="w-[45px] h-[45px] bg-bgWhite rounded-full flex items-center justify-center"
+        >
+          <input
+            class="display1 p-3 bg-transparent w-full border-0 otp text-center"
+            type="text"
+            oninput="digitValidate(this)"
+            onkeyup="tabChange(1)"
+            maxlength="1"
+          />
+        </div>
+
+        <div
+          class="w-[45px] h-[45px] bg-bgWhite rounded-full flex items-center justify-center"
+        >
+          <input
+            class="display2 p-3 bg-transparent w-full border-0 otp text-center"
+            type="text"
+            oninput="digitValidate(this)"
+            onkeyup="tabChange(2)"
+            maxlength="1"
+          />
+        </div>
+
+        <div
+          class="w-[45px] h-[45px] bg-bgWhite rounded-full flex items-center justify-center"
+        >
+          <input
+            class="display3 p-3 bg-transparent w-full border-0 otp text-center"
+            type="text"
+            oninput="digitValidate(this)"
+            onkeyup="tabChange(3)"
+            maxlength="1"
+          />
+        </div>
+
+        <div
+          class="w-[45px] h-[45px] bg-bgWhite rounded-full flex items-center justify-center"
+        >
+          <input
+            class="display4 p-3 bg-transparent w-full border-0 otp text-center"
+            type="text"
+            oninput="digitValidate(this)"
+            onkeyup="tabChange(4)"
+            maxlength="1"
+          />
+        </div>
+      </div>
+
+      <div class="show-password">
+        <i class="fa-regular fa-eye eye-icon"></i>
+      </div>
+
+      <div class="text-center text-mainPurple text-xl">
+        <a href="#">Forgot PIN?</a>
+      </div>
+
+      <div
+        class="cal-keys keys grid grid-cols-3 gap-4 py-5 text-2xl bg-textWhite rounded-2xl my-5"
+      >
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button></button>
+        <button>0</button>
+        <button data-action="clear" class="clear">
+          X
+          <!-- <i class="fa-solid fa-delete-left"></i> -->
+        </button>
+      </div>
+    </div>
+
+    <div class="top-up-sucess hide bg-textWhite p-3 text-center rounded-2xl">
+      <img src="./img/trac-suc.svg" alt="" class="mx-auto" />
+      <p class="font-bold text-lg">Top up successful</p>
+      <p class="text-sm font-light px-10">
+        You have successfully topped up 100 USD to your virtual card
+      </p>
+
+      <button
+        class="done-btn bg-mainPurple rounded-2xl px-14 text-sm py-3 mt-3 text-textWhite"
+      >
+        Done
+      </button>
+    </div>
+    <div class="overlay hide"></div>
   </body>
 
   <script src="./script.js"></script>

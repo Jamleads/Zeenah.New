@@ -177,7 +177,46 @@ if (document.querySelector('.create-card')) {
   });
 }
 
-if (document.querySelector('.set-pin')) {
+if (
+  document.querySelector('.fund-card') ||
+  document.querySelector('.withdraw-card')
+) {
+  const continueBtn = document.querySelector('.continue-btn');
+  const fundCardConfirmModal = document.querySelector(
+    '.fund-card-confirm-modal'
+  );
+  const closeModal = document.querySelector('.close-modal');
+  const overlay = document.querySelector('.overlay');
+
+  continueBtn.addEventListener('click', () => {
+    fundCardConfirmModal.classList.remove('hide');
+    overlay.classList.remove('hide');
+  });
+  closeModal.addEventListener('click', () => {
+    fundCardConfirmModal.classList.add('hide');
+    overlay.classList.add('hide');
+  });
+
+  const fundCardBtn = document.querySelector('.fund-card-btn');
+  const enterPinModal = document.querySelector('.enter-pin-modal');
+  const closePinModal = document.querySelector('.cancel2');
+
+  fundCardBtn.addEventListener('click', () => {
+    fundCardConfirmModal.classList.add('hide');
+    enterPinModal.classList.remove('hide');
+    overlay.classList.remove('hide');
+  });
+  closePinModal.addEventListener('click', () => {
+    enterPinModal.classList.add('hide');
+    overlay.classList.add('hide');
+  });
+}
+
+if (
+  document.querySelector('.set-pin') ||
+  document.querySelector('.fund-card') ||
+  document.querySelector('.withdraw-card')
+) {
   const key = document.querySelector('.cal-keys');
   const display1 = document.querySelector('.display1');
   const display2 = document.querySelector('.display2');
@@ -204,6 +243,25 @@ if (document.querySelector('.set-pin')) {
           display3.value = currentValue3 + keyContent;
         } else if (currentValue4 === '') {
           display4.value = currentValue4 + keyContent;
+          if (document.querySelector('.set-pin')) {
+            window.location.href = './home.html';
+          }
+
+          if (
+            document.querySelector('.fund-card') ||
+            document.querySelector('.withdraw-card')
+          ) {
+            const topUpSucess = document.querySelector('.top-up-sucess');
+            const topUpSucessDone = document.querySelector('.done-btn');
+            const enterPinModal = document.querySelector('.enter-pin-modal');
+
+            topUpSucess.classList.remove('hide');
+            enterPinModal.classList.add('hide');
+
+            topUpSucessDone.addEventListener('click', () => {
+              window.location.href = './home.html';
+            });
+          }
         }
       }
 
